@@ -129,15 +129,68 @@ body {
 #content {
   display: grid;
   place-items: center;
+  gap: 1.3rem;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
 
   .image-holder {
-    max-width: 80dvw;
-    max-height: 20dvw;
+    background-image: url("./assets/cafe-landscape2.jpg");
+    border-radius: 15px;
+    min-height: 100%;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: 1/1/-1/2;
   }
 
-  > img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  > .headline {
+    background-color: var(--bg-light);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px var(--bg);
+    font-family: "Corinthia";
+    font-size: clamp(1.5rem, 4dvw, 3rem);
   }
+
+  .hero-text,
+  .open-hours {
+    width: 70%;
+    font-size: clamp(1.5rem, 2.5dvw, 2.7rem);
+    margin: auto;
+  }
+
+  .hero-text {
+    display: grid;
+    gap: 2rem;
+    background-color: var(--bg);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+  }
+
+  .open-hours {
+    display: grid;
+    gap: 2rem;
+    background-color: var(--bg);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px var(--bg);
+  }
+  .open-hours > ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  #content {
+    grid-template-rows: 20dvw 0.7fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.test {
+  background-color: black;
 }
