@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Google Sans";
+  src: url(./assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Corinthia";
+  src: url(./assets/fonts/Corinthia/Corinthia-Regular.ttf);
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --bg-dark: oklch(0.4372 0.075 54);
+  --bg: oklch(0.549 0.075 54);
+  --bg-light: oklch(0.6936 0.075 54);
+  --text: oklch(93.403% 0.00011 271.152);
+  --text-muted: oklch(74.577% 0.00264 47.47);
+  --highlight: oklch(1 0.15 54);
+  --border: oklch(0.6 0.15 54);
+  --border-muted: oklch(0.7 0.15 54);
+  --primary: oklch(0.4 0.15 54);
+  --secondary: oklch(0.4 0.15 234);
+  --danger: oklch(0.5 0.15 30);
+  --warning: oklch(0.5 0.15 100);
+  --success: oklch(0.5 0.15 160);
+  --info: oklch(0.5 0.15 260);
+  --text-black: #000000;
+  font-size: 10px;
+}
+
+body {
+  font-family:
+    "Google Sans",
+    Arial,
+    Helvetica,
+    sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text);
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+
+#content {
+  display: grid;
+  place-items: center;
+
+  .image-holder {
+    max-width: 80dvw;
+    max-height: 20dvw;
+  }
+
+  > img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
