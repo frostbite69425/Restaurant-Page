@@ -1,7 +1,7 @@
 import "../styles.css";
-import initLoad from "./initLoad.service.js";
+import makeInitPage from "./initPage.service.js";
 
-initLoad();
+makeInitPage();
 
 // https://unsplash.com/photos/person-sitting-inside-restaurant-zlABb6Gke24?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 
