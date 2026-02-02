@@ -4,8 +4,8 @@ import stylePage from "./initPageStyleParser.service.js";
 const makeInitPage = () => {
   const imageHolder = new Element("div", "image-holder");
   const image = new Element("img", "main-image");
-  const headLine = new Element("div", "headline");
-  const headLineH1 = new Element("h1", " ");
+  const headLine = new Element("div", "headline"); // moved to components
+  const headLineH1 = new Element("h1", " "); // moved to components
   const intro = new Element("div", "hero-text");
   const heroParaOne = new Element("p", " ");
   const heroParaTwo = new Element("p", " ");
@@ -77,15 +77,7 @@ const makeInitPage = () => {
     headLine,
     intro,
     openHours,
-    heroParaOne,
-    heroParaTwo,
-    openHoursPara,
     openHoursList,
-    openHoursListItemOne,
-    openHoursListItemTwo,
-    openHoursListItemThree,
-    openHoursListItemFour,
-    openHoursListItemFive,
   ]);
 };
 

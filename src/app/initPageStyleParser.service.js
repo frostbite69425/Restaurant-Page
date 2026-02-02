@@ -9,15 +9,7 @@ export default function stylePage(array) {
     headLine,
     intro,
     openHours,
-    heroParaOne,
-    heroParaTwo,
-    openHoursPara,
     openHoursList,
-    openHoursListItemOne,
-    openHoursListItemTwo,
-    openHoursListItemThree,
-    openHoursListItemFour,
-    openHoursListItemFive,
   ] = array;
 
   setSyleOfElement(
@@ -56,7 +48,7 @@ export default function stylePage(array) {
     "box-shadow": "5px 5px 2px var(--bg)",
     "font-family": "Corinthia",
     "font-size": "clamp(1.5rem, 4dvw, 3rem)",
-  });
+  }); // exported to component
 
   setSyleOfElement(
     {
@@ -64,10 +56,8 @@ export default function stylePage(array) {
       "font-size": "clamp(1.5rem, 2.5dvw, 2.7rem)",
       margin: "auto",
     },
-    heroParaOne,
-    heroParaTwo,
-    openHoursPara,
-    openHoursList,
+    intro,
+    openHours,
   );
 
   intro.setStyle({
