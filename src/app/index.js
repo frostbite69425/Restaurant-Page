@@ -1,17 +1,19 @@
 import "../styles.css";
-import makeInitPage from "./initPage.service.js";
+import loadInitPage from "./initPageLoad.service.js";
 import addEventListenerToElement from "./utils/addEventListenerToElement.js";
 import makeAboutPage from "./aboutPage.service.js";
+import loadMenuPage from "./menuPage.service.js";
 
-makeInitPage();
+loadInitPage();
 
 (function () {
   const homeBtn = document.querySelector("header > nav > button:first-child");
   const menuBtn = document.querySelector("header > nav > button:nth-child(2)");
   const aboutBtn = document.querySelector("header > nav > button:last-child");
 
-  addEventListenerToElement(homeBtn, makeInitPage);
+  addEventListenerToElement(homeBtn, loadInitPage);
   addEventListenerToElement(aboutBtn, makeAboutPage);
+  addEventListenerToElement(menuBtn, loadMenuPage);
 })();
 
 // https://unsplash.com/photos/person-sitting-inside-restaurant-zlABb6Gke24?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink

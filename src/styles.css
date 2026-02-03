@@ -157,15 +157,50 @@ header > nav {
   }
 }
 
+footer {
+  padding: 2rem;
+  background-color: var(--primary);
+  color: var(--text);
+  border-radius: 15px;
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  a {
+    color: var(--text);
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    color: var(--text);
+    background: var(--info);
+    outline: 3px var(--border-card) solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform ease-in-out 200ms;
+  }
+
+  .button:hover {
+    transform: scale(1.04);
+  }
+}
+
 @media (max-width: 650px) {
-  #content {
+  .layout,
+  .layout > div.menu-holder {
     display: flex !important;
     flex-direction: column !important;
     gap: 2rem !important;
   }
 
-  #content > div.hero-text,
-  #content > div.open-hours {
+  .layout > div.hero-text,
+  .layout > div.open-hours {
     width: 100% !important;
   }
 }

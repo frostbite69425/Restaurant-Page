@@ -1,10 +1,12 @@
 import Element from "../elementClassController.js";
 
 const heroText = (text) => {
+  const heroContainerDiv = new Element("div", "hero-container");
   const headLine = new Element("div", "headline");
   const headLineH1 = new Element("h1", " ");
   Element.insertText(headLineH1, text);
   Element.setRelationship(headLine.elementName, headLineH1.elementName);
+  Element.setRelationship(heroContainerDiv.elementName, headLine.elementName);
 
   headLine.setStyle({
     "background-color": "var(--bg-light)",
@@ -14,6 +16,7 @@ const heroText = (text) => {
     "font-family": "Corinthia",
     "font-size": "clamp(1.5rem, 4dvw, 3rem)",
   });
+  return heroContainerDiv;
 };
 
 export default heroText;
